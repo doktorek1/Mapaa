@@ -1,0 +1,36 @@
+﻿# miasta
+0 Warszawa
+1 Białystok
+2 Łomża
+3 Ełk
+4 Suwałki
+5 Olsztyn
+6 Elbląg
+7 Gdańsk
+8 Tczew
+9 Bydgoszcz
+10 Poznań
+11 Łódź
+12 Płock
+13 Seroczyn
+14 Kołodziąż
+
+# połączenia
+0 1 50
+0 5 100
+0 11 15
+11 12 10
+10 12 80
+10 11 70
+10 9 100
+9 8 45
+8 7 15
+8 6 10
+6 5 40
+5 2 60
+2 3 20
+0 12 10
+3 4 10
+7 6 30
+5 14 45
+1 14 30
