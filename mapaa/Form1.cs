@@ -139,9 +139,6 @@ namespace Mapaa
 
         private void ustawLiczbe()
         {
-            int i = 0;
-           // while(i<2)
-            //label3.Text = s.samochod;
         }
 
 

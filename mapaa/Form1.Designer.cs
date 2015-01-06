@@ -38,7 +38,6 @@ namespace Mapaa
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             this.SuspendLayout();
@@ -103,21 +102,11 @@ namespace Mapaa
             this.label2.TabIndex = 6;
             this.label2.Text = "Pojemność samochodu: 2";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 50);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 17);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Samochód nr: -";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 903);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.label1);
@@ -143,7 +132,6 @@ namespace Mapaa
         private Label label1;
         private TrackBar trackBar2;
         private Label label2;
-        private Label label3;
  
     }
 }
