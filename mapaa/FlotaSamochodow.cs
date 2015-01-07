@@ -20,7 +20,6 @@ namespace Mapaa
         public void dodajZlecenieDoSamochodu(Zlecenie zlecenie, int numerSamochodu)
         {
             flota[numerSamochodu].dodajPaczkeDoSamochodu(zlecenie);
-            //Console.WriteLine(flota[numerSamochodu]);
         }
         public void dodajOdleglosc(int odleglosc, int numerSamochodu)
         {

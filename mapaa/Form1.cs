@@ -43,7 +43,7 @@ namespace Mapaa
                 myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Green);
             formGraphics = this.CreateGraphics();
             formGraphics.FillEllipse(myBrush, new Rectangle(x, y, 25, 25));
-            //
+
             string drawString = label;
             System.Drawing.Font drawFont = new System.Drawing.Font("Arial", 10);
             System.Drawing.SolidBrush drawBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
@@ -69,7 +69,7 @@ namespace Mapaa
             s.iloscSamochodow = samochody;
             ustawLiczbe();
             s.pojemnoscSamochodu = pojemnosc;
-            s.Start(@"E:\mapaa\mapaa\przesylki.txt");
+            s.Start(@"E:\mapaa\mapaa\przesylkii.txt");
         }
 
         private void button3_Click(object sender, EventArgs e)//przerywa program

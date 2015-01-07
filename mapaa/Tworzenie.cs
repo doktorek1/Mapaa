@@ -30,7 +30,6 @@ namespace Mapaa
             }
             for (int x = 0; x < polaczenia.Count; x++)
             {
-                //Console.WriteLine(polaczenia.Count);
                 mapa[polaczenia[x].dajPoczatek(), polaczenia[x].dajCel()] = polaczenia[x].dajOdleglosc();
                 mapa[polaczenia[x].dajCel(), polaczenia[x].dajPoczatek()] = polaczenia[x].dajOdleglosc();
             }            

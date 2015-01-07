@@ -10,10 +10,6 @@ namespace Mapaa
     {
         private List<Zlecenie> Kopiec_Ze_Zleceniami = new List<Zlecenie>();
         Zlecenie tmp;
-        /*public Kopiec(Zlecenie Kopiec_Ze_Zleceniami)
-        {
-            this.Kopiec_Ze_Zleceniami = Kopiec_Ze_Zleceniami;
-        }*/
 
         public void dodajZlecenieDoKopca(Zlecenie zlecenie)
         {
@@ -71,7 +67,6 @@ namespace Mapaa
             }
             return top;
         }
-        //public Zlecenie dajWierzcholekKopca(){}
         public List<Zlecenie> dajKopiec()
         {
             return Kopiec_Ze_Zleceniami;

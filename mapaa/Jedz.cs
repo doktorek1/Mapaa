@@ -34,7 +34,6 @@ namespace Mapaa
 
             for (int i = 0; i < iloscSamochodow; i++)
             {
-                //s.samochod = (i+1).ToString();
                 zlecenia = flotaaa.flota[i].dajSamochodZPaczkami();
                 int start = zlecenia[0].dajPoczatek();//id miasta startowego
                 int start2 = start;//zapamiętujemy w zmiennej pomocniczej powyższe id
@@ -80,55 +79,26 @@ namespace Mapaa
                                 f.DrawVertices(-1, (powrotne[powrotne.Count - 1 - jj] + 1).ToString(), wspolrzedne[powrotne[powrotne.Count - 1 - jj]].dajA(), wspolrzedne[powrotne[powrotne.Count - 1 - jj]].dajB());
                         }
                     }
-                    //f.DrawStringPointF("Samochód nr: " + (i + 1).ToString() + " Przebieg: " + flotaaa.odczytajPrzebiegZTablicyPojazdow(i).ToString() + " Pobrano przesyłkę " + zlecenia[0].dajId().ToString() + " z miasta " + listaMiast[start2].dajNazwe());
-                    //Console.WriteLine("Samochód nr: " + (i + 1).ToString() + " Przebieg: " + flotaaa.odczytajPrzebiegZTablicyPojazdow(i).ToString() + " Pobrano przesyłkę " + zlecenia[0].dajId().ToString() + " z miasta " + listaMiast[start2].dajNazwe());
-                    //f.DrawVertices(2, zlecenia[0].dajPoczatek().ToString(), wspolrzedne[listaMiast[start2].dajId()].dajA(), wspolrzedne[listaMiast[start2].dajId()].dajB());
+                    Console.WriteLine("Samochód nr: " + (i + 1).ToString() + " Przebieg: " + flotaaa.odczytajPrzebiegZTablicyPojazdow(i).ToString() + " Pobrano przesyłkę " + zlecenia[0].dajId().ToString() + " z miasta " + listaMiast[start2].dajNazwe());
                     if (start2 != zlecenia[0].dajCel())
                         flotaaa.dodajOdleglosc(wezel[iloscMiast, zlecenia[0].dajCel()].dajOdleglosc(), i);
                     else
                         flotaaa.dodajOdleglosc(0, i);
-                    //Console.WriteLine("Samochód nr: " + (i + 1) + " Przebieg: " + flotaaa.odczytajPrzebiegZTablicyPojazdow(i) + " Dostarczono przesyłkę " + zlecenia[0].dajId() + " do miasta " + listaMiast[zlecenia[0].dajCel()].dajNazwe());
-
+                    Console.WriteLine("Samochód nr: " + (i + 1) + " Przebieg: " + flotaaa.odczytajPrzebiegZTablicyPojazdow(i) + " Dostarczono przesyłkę " + zlecenia[0].dajId() + " do miasta " + listaMiast[zlecenia[0].dajCel()].dajNazwe());
                     start2 = zlecenia[0].dajCel();
                     stopwatch = Stopwatch.StartNew();
                     Thread.Sleep(500);
-                    //Thread.Sleep(wezel[iloscMiast, zlecenia[0].dajCel()].dajOdleglosc());
                     stopwatch.Stop();
-                    //f.DrawVertices(3, zlecenia[0].dajCel().ToString(), wspolrzedne[listaMiast[zlecenia[0].dajCel()].dajId()].dajA(), wspolrzedne[listaMiast[zlecenia[0].dajCel()].dajId()].dajB());
                     zlecenia.RemoveAt(0);
-                    Console.WriteLine();
 
                 }
                 //powrót do miasta startowego po następne paczki, także dodajemy odległość
                 wezel = dijkstra.obliczOdlegloscPomiedzyMiastami(flotaaa.flota[i].dajPolozenieSamochodu());
                 flotaaa.dodajOdleglosc(wezel[iloscMiast, start].dajOdleglosc(), i);//dopisujemy do przebiegu odległość powrotną, tzn musimy wrócić do miasta-bazy po następne paczki
                 flotaaa.polozenieSamochodu(start, i);
-                //Console.WriteLine(wezel[iloscMiast, start].dajOdleglosc());
-                //Console.WriteLine(flotaaa.flota[i].dajPolozenieSamochodu());
                 s.refresh(listaMiast);
             }
         }
 
     }
 }
-
-
-/* foreach (int value in powrotne)
-                    {
-                        Console.Write(value + " ");
-                        flaga = true;
-                        for (int u = 0; u < zlecenia.Count; u++)
-                        {
-                            if (value == zlecenia[u].dajCel())
-                                zlecenia.RemoveAt(u);
-                            if (zlecenia.Count == 1)
-                                break;
-                        }
-                        if (zlecenia.Count == 1)
-                            break;
-                    }
-                    Console.WriteLine();
-                    //if (flaga == true)
-                        //continue;
-                    if(zlecenia.Count == 0)
-                        Console.WriteLine("PUUUUUUUUUUUUUUUsto");*/

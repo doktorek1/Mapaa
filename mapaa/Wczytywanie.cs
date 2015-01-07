@@ -24,7 +24,6 @@ namespace Mapaa
         }
         public void ReadData()
         {
-            //lines;
             int id = -1;
 
             string[] lines = System.IO.File.ReadAllLines(@"E:\Mapaa\Mapaa\miasta.txt");
@@ -43,7 +42,6 @@ namespace Mapaa
                 }
                 lines[x] = lines[x].Remove(0, lines[x].IndexOf(" ") + 1);
                 miasta.Add(new Miasto(lines[x], id));
-                //Console.WriteLine(id + ", " + lines[x]);
                 x++;
             }
             iloscMiast = x - 1;
@@ -89,7 +87,6 @@ namespace Mapaa
                 {
                     Console.WriteLine("Niepoprawne dane w pliku!");
                 }
-                //Console.WriteLine(miastoStartowe);
                 x++;
                 while (x < lines.Length && !String.IsNullOrEmpty(lines[x]))
                 {
@@ -118,17 +115,16 @@ namespace Mapaa
                     m = r.Match(lines[x]);
                     String nazwaZlecenia = m.Value.Remove(m.Value.Length - 1, 1);
                     zlecenia.Add(new Zlecenie(id, poczatek, cel, priorytet, nazwaZlecenia));
-                    //Console.WriteLine(id + ", " + poczatek + ", " + cel + ", " + nazwaZlecenia + ", " + priorytet);
                     x++;
                 }
             }
             catch (FileNotFoundException)
             {
-                //f.PerformCalculations("Nie odnaleziono pliku wejściowego! ", "Fatal error");
+                f.kom("Fatal error!!! Nie odnaleziono pliku wejściowego!");
             }
             catch (ArgumentNullException)
             {
-                //f.PerformCalculations("Brak pliku!!!", "Fatal error");
+                
             }
         }
         public List<Miasto> DajMiasta()
